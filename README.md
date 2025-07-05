@@ -1,5 +1,7 @@
 # Milky
 
+<img align="center" src="./img/milky.png">
+
 Milky is a lightweight, one‑file toolkit that helps pentesters quickly verify
 and exploit common Jolokia misconfigurations / weaknesses (File‑read,
 AccessLogValve RCE, UserDatabase dump, Spring `EnvironmentManager` abuse,

@@ -7,7 +7,6 @@ and exploit common Jolokia misconfigurations / weaknesses (File‑read,
 AccessLogValve RCE, UserDatabase dump, Spring `EnvironmentManager` abuse,
 reflected XSS CVE‑2018‑1000129).
 
-> Milk soothes the spice, Milky calms down the Jolokia heat. 
 
 ## Installation
 

@@ -438,23 +438,22 @@ def main():
     
     subparsers = parser.add_subparsers(dest="command", required=True)
     
-    # Scan command
+
     scan_parser = subparsers.add_parser("scan", help="Scan for vulnerabilities")
     
-    # Deploy command
+
     deploy_parser = subparsers.add_parser("deploy", help="Deploy webshell")
     
-    # Read command
+
     read_parser = subparsers.add_parser("read", help="Read remote file")
     read_parser.add_argument("-f", "--file", required=True, help="File path to read")
     
-    # Credentials command
+
     creds_parser = subparsers.add_parser("creds", help="Extract credentials")
 
     xss_parser = subparsers.add_parser("xss", help="Check for reflected XSS (CVE-2018-1000129)")
 
 
-    # Spring command
     spring_parser = subparsers.add_parser("spring", help="Manage Spring properties")
     spring_parser.add_argument("-a", "--action", choices=["get", "set"], required=True, help="Action to perform")
     spring_parser.add_argument("-k", "--key", required=True, help="Property key")

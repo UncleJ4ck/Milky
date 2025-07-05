@@ -11,7 +11,7 @@ reflected XSS CVE‑2018‑1000129).
 ## Installation
 
 ```bash
-git clone https://github.com/unclej4ck/milky.git
+git clone https://github.com/UncleJ4ck/Milky
 cd milky
 python3 -m venv venv && . venv/bin/activate
 pip install -r requirements.txt
